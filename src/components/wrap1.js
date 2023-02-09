@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import DetailData from "../data/data";
+
 
 const Wrap1 = ()=>{
     const details = DetailData.map((props) => {
@@ -12,6 +14,10 @@ const Wrap1 = ()=>{
                     <img src={props.img} alt="/" className="w-full h-[300px]" />
                     <p className="text-[0.6em] mt-[40px]">{props.description}</p>
                     <p className="text-[0.6em] mt-[40px]">{props.description2}</p>
+                    <Link to={"/1"}>
+                         <button className="w-[150px] h-[50px] bg-red-700 text-white ">{props.Button}</button>
+                    </Link>
+                    
                   </div>
             </div>
         </div>
